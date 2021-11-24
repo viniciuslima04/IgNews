@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { SubscribeButton } from '../components/SubscribeButton';
-
+import { GetServerSideProps } from 'next'
 
 import styles from './home.module.scss';
 
@@ -20,6 +20,7 @@ export default function Home() {
           <h1>News about the <span>React</span> world.</h1>
 
           <p>
+
             Get acess to all the publications <br />
             
           <span>for $9.90</span>
@@ -34,5 +35,10 @@ export default function Home() {
   )
 }
 
-
-
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+     props :{
+       
+     }
+  }
+}
